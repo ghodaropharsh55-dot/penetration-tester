@@ -1,9 +1,6 @@
 import socket
 import requests
 
-# -----------------------------
-# MODULE 1: Port Scanner
-# -----------------------------
 def port_scanner(target, ports):
     print(f"\n[+] Scanning ports on {target}...")
     for port in ports:
@@ -17,9 +14,6 @@ def port_scanner(target, ports):
         except Exception as e:
             print(f"[ERROR] Could not scan port {port} - {e}")
 
-# -----------------------------
-# MODULE 2: Brute Force Login Tester
-# -----------------------------
 def brute_force_login(url, username, wordlist):
     print(f"\n[+] Starting brute force on {url} with username '{username}'...")
     for password in wordlist:
@@ -34,9 +28,6 @@ def brute_force_login(url, username, wordlist):
     print("[FAILED] No password found in wordlist.")
     return None
 
-# -----------------------------
-# MAIN MENU
-# -----------------------------
 if __name__ == "__main__":
     print("=== Penetration Testing Toolkit ===")
     print("1. Port Scanner")
